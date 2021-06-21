@@ -1,11 +1,13 @@
-require 'sinatra/base'
+require "sinatra/base"
 
 class BookmarkManager < Sinatra::Base
-
-  get '/' do
-
+  get "/" do
+    redirect "/bookmarks"
   end
 
-run! if app_file == $0
+  get "/bookmarks" do
+    "Bookmarks:"
+  end
 
+  run! if app_file == $0
 end

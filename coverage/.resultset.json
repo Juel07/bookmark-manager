@@ -1,7 +1,17 @@
 {
   "RSpec": {
     "coverage": {
-      "/Users/mikeconnolly/Desktop/Projects/Databases/bookmark-manager/bookmark-manager/spec/features/test_spec.rb": {
+      "/Users/juelb/Desktop/bookmark-manager/spec/features/test_spec.rb": {
+        "lines": [
+          1,
+          1,
+          1,
+          1,
+          null,
+          null
+        ]
+      },
+      "/Users/juelb/Desktop/bookmark-manager/spec/features/view_bookmarks_spec.rb": {
         "lines": [
           1,
           1,
@@ -12,6 +22,6 @@
         ]
       }
     },
-    "timestamp": 1624285434
+    "timestamp": 1624286455
   }
 }
