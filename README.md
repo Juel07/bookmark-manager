@@ -33,3 +33,12 @@ show
 <img src="/docs/domain-model_US1.png">
 
 ### MVC
+
+User->>+Browser: requests `bookmarks`
+Browser->>+Controller: GET /bookmarks
+Controller->>+Model: bookmark_list
+Model->>-Controller: bookmark_list array
+Controller->>+View: render :bookmark_list with @bookmarks
+View->>-Controller: HTML
+Controller->>-Browser: 200 OK, body HTML
+Browser->>-User: see bookmark list
