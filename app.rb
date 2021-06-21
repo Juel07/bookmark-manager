@@ -6,7 +6,7 @@ class BookmarkManager < Sinatra::Base
   end
 
   get "/bookmarks" do
-    "Bookmarks:"
+    erb :bookmarks
   end
 
   run! if app_file == $0
