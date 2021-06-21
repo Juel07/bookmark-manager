@@ -12,10 +12,24 @@
 - Users are restricted to manage only their own bookmarks
 
 
-## User Stories
+## User Story 1
 
 ```
 As a user,
 So that I may easily access my most frequented resources
 I would like to show a list of my bookmarks
 ```
+
+### Domain Model
+
+Nouns
+bookmark
+<!-- user -->
+list
+
+Verbs
+show
+
+<img src="/docs/domain-model_US1.png">
+
+### MVC
