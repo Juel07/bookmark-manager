@@ -11,4 +11,5 @@ group :test do
   gem 'bootstrap', '~> 5.0.1'
   gem 'selenium-webdriver'
   gem "sinatra-contrib", :require => true
+  gem "pg", :require => true
 end
