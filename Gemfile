@@ -10,4 +10,5 @@ group :test do
   gem 'simplecov-console', require: false
   gem 'bootstrap', '~> 5.0.1'
   gem 'selenium-webdriver'
+  gem "sinatra-contrib", :require => true
 end
