@@ -6,6 +6,12 @@
   </head>
   <body>
     <div>Bookmarks:</div>
-    <div><%= @bookmark_list.show_bookmarks %></div>
+    <div>
+      <ul>
+        <% @bookmarks.each do |bookmark| %>
+        <li><%= bookmark %></li>
+        <% end %>
+      </ul>
+    </div>
   </body>
 </html>
