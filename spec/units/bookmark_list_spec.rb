@@ -5,7 +5,7 @@ describe BookmarkList do
   #   let(:url) { double :url }
   subject(:bookmark_list) { described_class.new }
   it "can have a bookmark" do
-    expect(bookmark_list.show_bookmarks).to be_an_instance_of(Array)
+    expect(bookmark_list.show_bookmarks).not_to be_empty
   end
   #   it "has a url" do
   #   end
