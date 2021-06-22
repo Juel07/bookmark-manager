@@ -1,18 +1,13 @@
-require 'pg'
+require "pg"
 
 class Bookmark
-  # attr_reader :name, :url
-
-  # def initialize(name, url)
-  #   @name = name
-  #   @url = url
-  # end
-
   def self.show_bookmarks
-    connection = PG.connect( dbname: 'bookmark_manager' )
+    if ENV["ENVIRONMENT"] == "test"
+      connection = PG.connect(dbname: "bookmark_manager_test")
+    else
+      connection = PG.connect(dbname: "bookmark_manager")
+    end
     result = connection.exec("SELECT * FROM bookmarks;")
-    result.map { |bookmark| [bookmark['name'], bookmark['url'] ] }
-      # "#{bookmark['name']}: #{bookmark['url']}" }
+    result.map { |bookmark| [bookmark["name"], bookmark["url"]] }
   end
-  
 end
