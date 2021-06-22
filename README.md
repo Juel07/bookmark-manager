@@ -45,7 +45,7 @@ show
 <img src="/docs/domain-model_US1.png">
 
 ### MVC
-
+```
 User->>+Browser: requests `bookmarks`
 Browser->>+Controller: GET /bookmarks
 Controller->>+Model: bookmark_list
@@ -54,3 +54,48 @@ Controller->>+View: render :bookmark_list with @bookmarks
 View->>-Controller: HTML
 Controller->>-Browser: 200 OK, body HTML
 Browser->>-User: see bookmark list
+```
+
+## User Story 2
+
+```
+As a user,
+So that I may add resources to my list
+I would like to be able to add a new bookmark
+```
+
+### Updated MVC
+
+```
+sequenceDiagram
+User->>+Browser: requests `bookmarks`
+Browser->>+Controller: GET /bookmarks
+Controller->>+Model: bookmark_list
+Model->>-Controller: bookmark_list array
+Controller->>+View: render :bookmark_list with @bookmarks
+View->>-Controller: HTML
+Controller->>-Browser: 200 OK, body HTML
+Browser->>-User: see bookmark list
+
+User->>+Browser: clicks 'add new bookmark'
+Browser->>+Controller: GET /bookmarks/new
+Controller->>+View: render :new_bookmark
+View->>-Controller: HTML
+Controller->>-Browser: 200 OK, body HTML
+Browser->>-User: see add bookmark form
+
+
+User->>+Browser: fills in name, URL, clicks submit
+Browser->>+Controller: POST /bookmarks/add
+Controller->>+Model: bookmark.add
+Controller->>-Browser: 303 Redirect, /bookmarks
+Browser->>+Controller: GET /bookmarks
+Controller->>+Model: bookmark.show_bookmarks
+Model->>-Controller: bookmark list array
+Controller->>+View: render :bookmarks with new bookmark
+View->>-Controller: HTML
+Controller->>-Browser: 200 OK, body HTML, @bookmarks
+Browser->>-User: sees updated bookmark list
+```
+
+<img src="/images/User-Story-2_MVC.jpeg">
