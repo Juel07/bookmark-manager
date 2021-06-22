@@ -9,7 +9,7 @@
     <div>
       <ul>
         <% @bookmarks.each do |bookmark| %>
-        <li><%= bookmark %></li>
+        <li><%= "#{bookmark[0]}: #{bookmark[1]}" %></li>
         <% end %>
       </ul>
     </div>
