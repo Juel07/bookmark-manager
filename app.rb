@@ -10,7 +10,6 @@ class BookmarkManager < Sinatra::Base
 
   get "/bookmarks" do
     @bookmarks = Bookmark.show_bookmarks
-    @bookmarks_unpacked = @bookmarks.each { |array| array }
     erb :bookmarks
   end
 
