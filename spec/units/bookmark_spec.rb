@@ -26,4 +26,10 @@ describe Bookmark do
 
   end
 
+  it 'can add a bookmark' do
+    Bookmark.add(name, url)
+    bookmarks = Bookmark.show_bookmarks
+    expect(bookmarks).to include(["#{name}", "#{url}"])
+  end
+
 end
