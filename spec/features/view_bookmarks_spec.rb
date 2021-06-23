@@ -13,8 +13,8 @@ feature "Viewing bookmarks" do
     connection.exec("INSERT INTO bookmarks (url, name) VALUES ('http://www.askjeeves.com/', 'AskJeeves');")
 
     visit("/bookmarks")
-    expect(page).to have_content "Makers: http://www.makers.tech/"
-    expect(page).to have_content "Twitter: http://www.twitter.com"
-    expect(page).to have_content "AskJeeves: http://www.askjeeves.com/"
+    expect(page).to have_link('Makers', href: 'http://www.makers.tech/')
+    expect(page).to have_link('Twitter', href: 'http://www.twitter.com/')
+    expect(page).to have_link('AskJeeves', href: 'http://www.askjeeves.com/')
   end
 end
