@@ -2,13 +2,21 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
-    <title></title>
+    <link href="<%= url("/styles.css") %>" rel="stylesheet" type="text/css" />
+    <title>Bookmark Manager</title>
   </head>
-  <body>
-    <form action='/bookmarks/add' method='post'>
-      <input type="text" name="name" placeholder="site name">
-      <input type="text" name="url" placeholder="site address">
-      <input type="submit" value="submit">
+  <body class="container">
+  <h1>Create a new bookmark</h1>
+    <form action='/bookmarks/add' method='post' class="form">
+    <div>
+    <label>Title </label>
+    <input type="text" name="name" placeholder="site name">
+    </div>
+    <div>
+    <label>URL</label>
+    <input type="text" name="url" placeholder="site address">
+    </div>
+    <input type="submit" value="Submit">
     </form>
   </body>
 </html>

@@ -59,24 +59,7 @@
       },
       "/Users/juelb/Desktop/Makers/bookmark-manager/spec/units/bookmark_list_spec.rb": {
         "lines": [
-          1,
           null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null
-        ]
-      },
-      "/Users/juelb/Desktop/Makers/bookmark-manager/lib/bookmark_list.rb": {
-        "lines": [
           null,
           null,
           null,
@@ -99,7 +82,6 @@
           1,
           2,
           2,
-          null,
           null,
           1,
           null,
@@ -127,6 +109,6 @@
         ]
       }
     },
-    "timestamp": 1624494973
+    "timestamp": 1624540406
   }
 }
