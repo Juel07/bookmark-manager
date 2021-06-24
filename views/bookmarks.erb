@@ -1,24 +1,35 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
-  <head>
+
+<head>
     <meta charset="utf-8">
-     <link href="<%= url("/styles.css") %>" rel="stylesheet" type="text/css" />
+    <link href="<%= url("/styles.css") %>" rel="stylesheet" type="text/css" />
     <title>Bookmark Manager</title>
-  </head>
-  <body class="container">
+</head>
+
+<body class="container">
     <h1>Bookmarks 🔖</h1>
     <div>
-      <ul>
-        <% @bookmarks.each do |bookmark| %>
-          <a href="<%= bookmark.url %>"><li><%= bookmark.name %></li></a>
-        <% end %>
-      </ul>
+        <ul>
+            <% @bookmarks.each do |bookmark| %>
+                <li class="row bookmark" id="bookmark-<%= bookmark.id %>">
+                    <a href="<%= bookmark.url %>" target="_blank" class="container">
+                        <%= bookmark.name%>
+                    </a>
+                    <form action="/bookmarks/<%= bookmark.id %>" method="post">
+                        <input type='hidden' name='_method' value='DELETE' />
+                        <input type="submit" value="X" />
+                    </form>
+                </li>
+            <% end %>
+        </ul>
     </div>
     <div>
-      <br>
-    <form action='/bookmarks/new' method='get'>
-      <input type="submit" value="Add bookmark">
-    </form>
+        <br>
+        <form action='/bookmarks/new' method='get'>
+            <input type="submit" value="Add bookmark" />
+        </form>
     </div>
-  </body>
+</body>
+
 </html>

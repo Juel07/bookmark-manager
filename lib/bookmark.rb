@@ -18,6 +18,11 @@ class Bookmark
     Bookmark.new(id: result[0]["id"], name: result[0]["name"], url: result[0]["url"])
   end
 
+  def self.delete(id)
+    self.environment
+    @connection.exec_params("DELETE FROM bookmarks WHERE id = $1;", [id])
+  end
+
   attr_reader :id, :name, :url
 
   def initialize(id:, name:, url:)
