@@ -1,7 +1,6 @@
 require "sinatra/base"
 require "sinatra/reloader"
 require_relative "lib/bookmark"
-# require_relative "lib/bookmark_list"
 
 class BookmarkManager < Sinatra::Base
   get "/" do
@@ -18,8 +17,9 @@ class BookmarkManager < Sinatra::Base
   end
 
   post "/bookmarks/add" do
+    p params
     Bookmark.add(params[:name], params[:url])
-    redirect('/bookmarks')
+    redirect("/bookmarks")
   end
 
   run! if app_file == $0

@@ -1,4 +1,4 @@
-require "bookmark_list"
+# require "bookmark_list"
 
 # describe BookmarkList do
 #   let(:bookmark) { double :bookmark }

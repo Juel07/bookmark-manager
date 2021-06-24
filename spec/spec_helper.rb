@@ -11,12 +11,12 @@ require "rspec"
 require "simplecov"
 require "simplecov-console"
 require "features/web_helpers"
-require_relative "./setup_test_database"
+require "setup_test_database"
 
 SimpleCov.formatter = SimpleCov::Formatter::MultiFormatter.new([
   SimpleCov::Formatter::Console,
-# Want a nice code coverage website? Uncomment this next line!
-SimpleCov::Formatter::HTMLFormatter
+  # Want a nice code coverage website? Uncomment this next line!
+  SimpleCov::Formatter::HTMLFormatter,
 ])
 SimpleCov.start
 

@@ -4,13 +4,13 @@
 
 ### Set up SQL Databases
 1. Connect to psql
-2. Create the database using the psql command `CREATE DATABASE bookmark_manager;`
-3. Connect to the database using the pqsl command `\c` bookmark_manager;
-4. Run the query we have saved in the file 01_create_bookmarks_table.sql
+2. Create a database using the psql command `CREATE DATABASE bookmark_manager;`
+3. Connect to the database using the pqsl command `\c bookmark_manager;`
+4. Run the query we have saved in the file `01_create_bookmarks_table.sql`
 5. Disconnect from database
-6. Create the test database using the psql command `CREATE DATABASE bookmark_manager_test;`
-7. Connect to the database using the pqsl command `\c` bookmark_manager_test;
-8. Run the query we have saved in the file 01_create_bookmarks_table.sql
+6. Create a test database using the psql command `CREATE DATABASE bookmark_manager_test;`
+7. Connect to the database using the pqsl command `\c bookmark_manager_test;`
+8. Run the query we have saved in the file `01_create_bookmarks_table.sql`
 
 ## Intended Features
 
@@ -23,7 +23,6 @@
 - Filter bookmarks by tag
 - Users are restricted to manage only their own bookmarks
 
-
 ## User Story 1
 
 ```
@@ -31,18 +30,6 @@ As a user,
 So that I may easily access my most frequented resources
 I would like to show a list of my bookmarks
 ```
-
-### Domain Model
-
-Nouns
-bookmark
-<!-- user -->
-list
-
-Verbs
-show
-
-<img src="/docs/domain-model_US1.png">
 
 ### MVC
 ```
@@ -56,6 +43,8 @@ Controller->>-Browser: 200 OK, body HTML
 Browser->>-User: see bookmark list
 ```
 
+<img src="/docs/domain-model_US1.png">
+
 ## User Story 2
 
 ```
@@ -63,6 +52,16 @@ As a user,
 So that I may add resources to my list
 I would like to be able to add a new bookmark
 ```
+
+### Domain Model
+
+Nouns
+- bookmark
+- list
+
+Verbs
+- show
+- add
 
 ### Updated MVC
 
@@ -83,7 +82,6 @@ Controller->>+View: render :new_bookmark
 View->>-Controller: HTML
 Controller->>-Browser: 200 OK, body HTML
 Browser->>-User: see add bookmark form
-
 
 User->>+Browser: fills in name, URL, clicks submit
 Browser->>+Controller: POST /bookmarks/add

@@ -1,8 +1,6 @@
 require "pg"
 
 class Bookmark
-
-
   def self.show_bookmarks
     self.environment
     result = @connection.exec("SELECT * FROM bookmarks;")
@@ -23,5 +21,4 @@ class Bookmark
       @connection = PG.connect(dbname: "bookmark_manager")
     end
   end
-
 end
