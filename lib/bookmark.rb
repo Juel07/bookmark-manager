@@ -11,9 +11,9 @@ class Bookmark
 
   def self.add(name, url)
     self.environment
-    result = @connection.exec(
-      "INSERT INTO bookmarks (name, url) VALUES ('#{name}', '#{url}')
-      RETURNING id, name, url;"
+    result = @connection.exec_params(
+      "INSERT INTO bookmarks (name, url) VALUES ($1, $2)
+      RETURNING id, name, url;", [name, url]
     )
     Bookmark.new(id: result[0]["id"], name: result[0]["name"], url: result[0]["url"])
   end
