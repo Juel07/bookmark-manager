@@ -23,6 +23,23 @@ class Bookmark
     @connection.exec_params("DELETE FROM bookmarks WHERE id = $1;", [id])
   end
 
+  def self.update(id, name, url)
+    self.environment
+    result = @connection.exec_params(
+      "UPDATE bookmarks SET name = $1, url = $2 WHERE id = $3
+      RETURNING id, name, url;", [name, url, id]
+    )
+    Bookmark.new(id: result[0]["id"], name: result[0]["name"], url: result[0]["url"])
+  end
+
+  def self.find(id)
+    self.environment
+    result = @connection.exec(
+      "SELECT * FROM bookmarks WHERE id = $1;", [id]
+    )
+    Bookmark.new(id: result[0]["id"], name: result[0]["name"], url: result[0]["url"])
+  end
+
   attr_reader :id, :name, :url
 
   def initialize(id:, name:, url:)

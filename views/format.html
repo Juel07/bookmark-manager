@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="utf-8">
+    <link href="<%= url(" /styles.css") %>" rel="stylesheet" type="text/css" />
+    <title>Bookmark Manager</title>
+</head>
+
+<body class="container">
+    <h1>Edit bookmark</h1>
+    <form action='/bookmarks/add' method='post' class="form">
+        <input type='hidden' name='_method' value='PATCH' />
+        <div>
+            <label for="name"><span>Title:</span></label>
+            <input type="text" name="name">
+        </div>
+        <div>
+            <label for="url"><span>Link:</span></label>
+            <input type="text" name="url">
+        </div>
+        <input type="submit" value="Done">
+    </form>
+</body>
+
+</html>

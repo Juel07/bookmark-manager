@@ -2,6 +2,7 @@ body {
   font-family: "Noto Sans", sans-serif;
   background-color: #f8f9fe;
   font-weight: 300;
+  font-size: 16px;
   color: #222222;
 }
 
@@ -36,10 +37,16 @@ label span {
   font-size: 18px;
 }
 
-input{
-  padding: 0.5em;
+input[type="text"] {
+  padding: 1em 0.7em;
   border: none;
   outline: none;
+}
+
+.pencil {
+  background-color: transparent !important;
+  color: #400299 !important;
+  transform: scale(1.8);
 }
 
 input[type="submit"] {
@@ -50,14 +57,17 @@ input[type="submit"] {
   outline: none;
   letter-spacing: 0.15em;
   padding: 0.5em 0.8em;
+  cursor: pointer;
+  font-size: 18px;
 }
 
-input[type="submit"]:hover{
+input[type="submit"]:hover {
   transform: scale(1.1);
 }
 
-::placeholder {
-  font-size: 15px;
+::placeholder,
+input[type="text"] {
+  font-size: 16px;
 }
 
 a {

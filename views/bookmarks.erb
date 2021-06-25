@@ -16,10 +16,15 @@
                     <a href="<%= bookmark.url %>" target="_blank" class="container">
                         <%= bookmark.name%>
                     </a>
-                    <form action="/bookmarks/<%= bookmark.id %>" method="post">
-                        <input type='hidden' name='_method' value='DELETE' />
-                        <input type="submit" value="X" />
-                    </form>
+                    <div class="row">
+                        <form action="/bookmarks/<%= bookmark.id %>/edit" method="get">
+                            <input type="submit" name="edit" value="&#9998;" class="pencil" />
+                        </form>
+                        <form action="/bookmarks/<%= bookmark.id %>" method="post">
+                            <input type='hidden' name='_method' value='DELETE' />
+                            <input type="submit" value="X" />
+                        </form>
+                    </div>
                 </li>
             <% end %>
         </ul>

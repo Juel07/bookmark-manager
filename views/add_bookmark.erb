@@ -9,12 +9,10 @@
   <h1>Create a new bookmark</h1>
     <form action='/bookmarks/add' method='post' class="form">
     <div>
-      <label for="name"><span>Title:</span></label>
-      <input type="text" name="name" placeholder="site name">
+      <input type="text" name="name" placeholder="site name" required>
     </div>
     <div>
-      <label for="url"><span>Link:</span></label>
-      <input type="text" name="url" placeholder="site address">
+      <input type="text" name="url" placeholder="site address" required>
     </div>
       <input type="submit" value="Submit">
     </form>

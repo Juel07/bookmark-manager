@@ -32,22 +32,38 @@
           1,
           1,
           null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
           null
         ]
       },
       "/Users/juelb/Desktop/Makers/bookmark-manager/spec/features/test_spec.rb": {
         "lines": [
           1,
+          1,
+          1,
+          1,
+          null,
+          null
+        ]
+      },
+      "/Users/juelb/Desktop/Makers/bookmark-manager/spec/features/update_bookmark_spec.rb": {
+        "lines": [
+          1,
+          2,
+          2,
+          2,
+          2,
+          null,
+          1,
+          1,
+          1,
+          1,
+          null,
+          1,
+          1,
+          1,
+          1,
+          1,
+          null,
           1,
           1,
           1,
@@ -162,10 +178,35 @@
           1,
           null,
           null,
+          null,
+          1,
+          1,
+          1,
+          1,
+          null,
+          1,
+          1,
+          1,
+          1,
+          null,
+          null,
+          null,
+          1,
+          1,
+          1,
+          null,
+          1,
+          null,
+          1,
+          1,
+          1,
+          1,
+          null,
+          null,
           null
         ]
       }
     },
-    "timestamp": 1624554596
+    "timestamp": 1624583901
   }
 }

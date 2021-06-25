@@ -12,6 +12,10 @@ Built a database backed web application, to store user's favourite links.
 
 <img src = "/screenshots/bookmarks.png" width = "60%">
 
+<img src = "/screenshots/add-bookmark.png" width = "60%">
+
+<img src = "/screenshots/edit-bookmark.png" width = "60%">
+
 ## How to
 
 ### Set up the project
