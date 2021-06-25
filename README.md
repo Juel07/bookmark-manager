@@ -10,11 +10,11 @@ Built a database backed web application, to store user's favourite links.
 
 ### Screenshots
 
-<img src = "/screenshots/bookmarks.png" width = "60%">
+<img src = "/screenshots/bookmarks.png" width = "70%">
 
-<img src = "/screenshots/add-bookmark.png" width = "60%">
+<img src = "/screenshots/add-bookmark.png" width = "70%">
 
-<img src = "/screenshots/edit-bookmark.png" width = "60%">
+<img src = "/screenshots/edit-bookmark.png" width = "70%">
 
 ## How to
 
@@ -57,7 +57,7 @@ To create the tables, run the SQL queries in the `db/migrations` folder in the g
 - Show a list of bookmarks ✅
 - Add new bookmarks ✅
 - Delete bookmarks ✅
-- Update bookmarks 🚧
+- Update bookmarks ✅
 - Comment on bookmarks 🚧
 - Tag bookmarks into categories 🚧
 - Filter bookmarks by tag 🚧
